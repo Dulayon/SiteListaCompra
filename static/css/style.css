@@ -1,0 +1,51 @@
+#reg{
+    background-color:#00014b;
+}
+
+label{
+    font-size:60px;
+    color:#00e5e5;
+}
+
+input{
+    font-size:40px;
+}
+
+body{
+    background-color:#00334c;
+}
+
+#plist{
+    font-size:50px;
+}
+
+button{
+    font-size:50px;
+}
+
+legend{
+    font-size:50px;
+    color:white;
+}
+
+#box {
+    width: 30px;
+    height: 30px;
+}
+
+pre {
+    font-size:30px;
+    color:white;
+}
+
+#spc1 {
+    padding:50px;
+}
+
+p {
+    padding:25px;
+}
+
+#spc3 {
+    padding:2px;
+}

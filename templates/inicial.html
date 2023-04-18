@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Página inicial</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+</head>
+<body>
+    <div class="registro" id="reg">    
+        <form action="/registrar" method="POST">
+            <p id="spc1">
+                <label>Produto </label><input type="text" name="produto">
+            </p>
+            <p id="spc2">
+                <center>
+                    <button>Registrar</button>
+                </center>
+            </p>
+        </form>
+    </div>
+    <p></p>
+    {% if ativo %}
+        <pre>
+Não existe mais items na lista de compra . 
+        </pre>
+    {% endif %}
+    <p></p>
+    {% if lista %}
+        <form action="/atualizar" method="POST">
+            <fieldset>
+                <legend>Lista dos Produtos</legend>
+                {% for x in lista %}
+                    <input type="checkbox" name={{x}} id="box"> <label id="plist"> {{x}} </label>
+                    <p id = "spc3"></p>
+                
+                {% endfor %}
+                <p></p>
+                <center>
+                    <button>Atualizar</button>
+                </center>
+            </fieldset>
+        </form>
+    {% endif %}
+</body>
+</html>
